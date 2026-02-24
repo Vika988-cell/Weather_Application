@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.weather-app {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.weather-app input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.weather-app button {
+  padding: 10px 15px;
+  background: #4facfe;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-app button:hover {
+  background: #00c6fb;
+}
+
+#weatherResult img {
+  width: 80px;
+  height: 80px;
+}
+
+#weatherResult {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+#weatherResult.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4facfe;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+.location-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #00c6fb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.location-btn:hover {
+  background: #0099cc;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .weather-app {
+    max-width: 90%;
+    padding: 15px;
+  }
+  #weatherResult img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-app input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .weather-app button {
+    width: 100%;
+  }
+}

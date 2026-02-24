@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Прогноз погоды</title>
+</head>
+<body onload="getWeatherByLocation()">
+	<div class="weather-app">
+		<input type="text" id="cityInput" placeholder="Введите город">
+		<button onclick="getWeather(document.getElementById('cityInput').value)">Показать погоду</button>
+		<button onclick="getWeatherByLocation()" class="location-btn">Определить моё местоположение</button>
+		<div id="weatherResult"></div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
